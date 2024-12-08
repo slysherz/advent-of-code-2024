@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppvsdbg",
+            "name": "Debug MSVC",
+            "program": "${workspaceFolder}/out/day1.exe",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "input/${fileBasenameNoExtension}.txt"
+            ],
+            "preLaunchTask": "zig-build"
+        }
+    ]
+}
