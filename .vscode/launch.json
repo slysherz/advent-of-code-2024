@@ -2,9 +2,19 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "input/${fileBasenameNoExtension}.txt"
+            ]
+        },
+        {
             "type": "cppvsdbg",
             "name": "Debug MSVC",
-            "program": "${workspaceFolder}/out/day1.exe",
+            "program": "${workspaceFolder}/out/${fileBasenameNoExtension}.exe",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "args": [
