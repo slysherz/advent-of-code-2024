@@ -1,18 +1,12 @@
 import sys
 import re
-
-def get_input():
-    filename = sys.argv[1]
-    with open(filename) as f:
-        return f.read()
-    
-    raise Exception("No input file provided")
+import shared
 
 def main():
     result1 = 0
     result2 = 0
     enabled = True
-    for line in get_input().splitlines():
+    for line in shared.get_input().splitlines():
         for m in re.finditer(r'(mul\((\d+),(\d+)\))|(do\(\))|(don\'t\(\))', line):
             s = m.group()
             if s == 'do()':

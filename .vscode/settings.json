@@ -1,3 +1,6 @@
 {
     "debug.onTaskErrors": "abort",
+    "files.exclude": {
+        "**/__pycache__": true,
+    }
 }
